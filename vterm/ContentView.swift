@@ -191,6 +191,43 @@ struct SubscribeView: View {
     }
 }
 
+struct ConfigView: View {
+    private let settings = ROSSettings.shared
+    @State private var newPeer = ""
+
+    var body: some View {
+        Form {
+            Section {
+                ForEach(settings.peers, id: \.self) { peer in
+                    Text(peer).font(.system(.body, design: .monospaced))
+                }
+                .onDelete { settings.peers.remove(atOffsets: $0) }
+            } header: {
+                Text("DDS Peers")
+            } footer: {
+                Text("Unicast peers for DDS discovery. Changes take effect when ROS is next started.")
+            }
+
+            Section("Add Peer") {
+                HStack {
+                    TextField("192.168.x.x or hostname.local", text: $newPeer)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                    Button("Add") {
+                        let p = newPeer.trimmingCharacters(in: .whitespaces)
+                        guard !p.isEmpty, !settings.peers.contains(p) else { return }
+                        settings.peers.append(p)
+                        newPeer = ""
+                    }
+                    .disabled(newPeer.trimmingCharacters(in: .whitespaces).isEmpty)
+                }
+            }
+        }
+        .navigationTitle("Configuration")
+        .toolbar { EditButton() }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         TabView {
@@ -198,6 +235,8 @@ struct ContentView: View {
                 .tabItem { Label("Publish", systemImage: "paperplane") }
             NavigationStack { SubscribeView() }
                 .tabItem { Label("Subscribe", systemImage: "antenna.radiowaves.left.and.right") }
+            NavigationStack { ConfigView() }
+                .tabItem { Label("Config", systemImage: "gear") }
         }
     }
 }

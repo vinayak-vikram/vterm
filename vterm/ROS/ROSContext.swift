@@ -29,17 +29,20 @@ final class ROSContext {
         // Mac may reply to a cellular/VPN address and SEDP matching never forms.
         if ProcessInfo.processInfo.environment["CYCLONEDDS_URI"] == nil {
             let wifiIP = Self.wifiIPAddress() ?? "auto"
+            let peers = ROSSettings.shared.peers
+            let peersXML = peers.isEmpty ? "" :
+                "<Discovery><Peers>" +
+                peers.map { "<Peer address=\"\($0)\"/>" }.joined() +
+                "</Peers></Discovery>"
             let xml = "<CycloneDDS><Domain>" +
                       "<General>" +
                       "<NetworkInterfaceAddress>\(wifiIP)</NetworkInterfaceAddress>" +
                       "<AllowMulticast>false</AllowMulticast>" +
                       "</General>" +
-                      "<Discovery><Peers>" +
-                      "<Peer address=\"192.168.0.138\"/>" +
-                      "</Peers></Discovery>" +
+                      peersXML +
                       "</Domain></CycloneDDS>"
             setenv("CYCLONEDDS_URI", xml, 0)
-            print("[ROSContext] CYCLONEDDS_URI set (WiFi IP: \(wifiIP))")
+            print("[ROSContext] CYCLONEDDS_URI set (WiFi IP: \(wifiIP), peers: \(peers))")
         }
 
         let cArgs = args.map { strdup($0) }
