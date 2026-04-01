@@ -1,0 +1,146 @@
+// ROS2.xcconfig
+// Build settings for cross-compiled ROS2 static libraries on iOS (arm64).
+// Apply this file to the vterm target's Debug and Release configurations.
+
+// ---------------------------------------------------------------------------
+// Architecture — only arm64 is supported (device + Apple Silicon simulator)
+// ---------------------------------------------------------------------------
+ARCHS = arm64
+VALID_ARCHS = arm64
+
+// ---------------------------------------------------------------------------
+// Suppress Doxygen/documentation warnings from ROS headers
+// ---------------------------------------------------------------------------
+OTHER_WARNING_FLAGS = $(inherited) -Wno-documentation -Wno-documentation-unknown-command
+
+// ---------------------------------------------------------------------------
+// C++ standard and runtime
+// ---------------------------------------------------------------------------
+CLANG_CXX_LANGUAGE_STANDARD = c++17
+CLANG_CXX_LIBRARY = libc++
+
+// ---------------------------------------------------------------------------
+// Bitcode is not supported with cross-compiled static libs
+// ---------------------------------------------------------------------------
+ENABLE_BITCODE = NO
+
+// ---------------------------------------------------------------------------
+// Swift/ObjC++ bridging header and interop mode
+// ---------------------------------------------------------------------------
+SWIFT_OBJC_BRIDGING_HEADER = vterm/ROS/vterm-Bridging-Header.h
+SWIFT_OBJC_INTEROP_MODE = objcxx
+
+// ---------------------------------------------------------------------------
+// Header search paths
+// Add every subdirectory of install-ios/include that contains public headers,
+// plus the cyclonedds include tree.
+// ---------------------------------------------------------------------------
+HEADER_SEARCH_PATHS = $(inherited) \
+    $(PROJECT_DIR)/libs/install-ios/include \
+    $(PROJECT_DIR)/libs/install-ios/include/rcutils \
+    $(PROJECT_DIR)/libs/install-ios/include/rclcpp \
+    $(PROJECT_DIR)/libs/install-ios/include/rcl \
+    $(PROJECT_DIR)/libs/install-ios/include/rcl_interfaces \
+    $(PROJECT_DIR)/libs/install-ios/include/rcl_logging_interface \
+    $(PROJECT_DIR)/libs/install-ios/include/rcl_yaml_param_parser \
+    $(PROJECT_DIR)/libs/install-ios/include/rcpputils \
+    $(PROJECT_DIR)/libs/install-ios/include/rcutils \
+    $(PROJECT_DIR)/libs/install-ios/include/rmw \
+    $(PROJECT_DIR)/libs/install-ios/include/rmw_cyclonedds_cpp \
+    $(PROJECT_DIR)/libs/install-ios/include/rmw_dds_common \
+    $(PROJECT_DIR)/libs/install-ios/include/rosidl_runtime_c \
+    $(PROJECT_DIR)/libs/install-ios/include/rosidl_runtime_cpp \
+    $(PROJECT_DIR)/libs/install-ios/include/rosidl_typesupport_interface \
+    $(PROJECT_DIR)/libs/install-ios/include/rosidl_typesupport_introspection_c \
+    $(PROJECT_DIR)/libs/install-ios/include/rosidl_typesupport_introspection_cpp \
+    $(PROJECT_DIR)/libs/install-ios/include/std_msgs \
+    $(PROJECT_DIR)/libs/install-ios/include/builtin_interfaces \
+    $(PROJECT_DIR)/libs/install-ios/include/service_msgs \
+    $(PROJECT_DIR)/libs/install-ios/include/rosgraph_msgs \
+    $(PROJECT_DIR)/libs/install-ios/include/statistics_msgs \
+    $(PROJECT_DIR)/libs/install-ios/include/rcl_interfaces \
+    $(PROJECT_DIR)/libs/install-ios/include/type_description_interfaces \
+    $(PROJECT_DIR)/libs/install-ios/include/ament_index_cpp \
+    $(PROJECT_DIR)/libs/install-ios/include/libstatistics_collector \
+    $(PROJECT_DIR)/libs/install-ios/include/rosidl_dynamic_typesupport \
+    $(PROJECT_DIR)/libs/install-ios/include/tracetools \
+    $(PROJECT_DIR)/libs/cyclonedds/include
+
+// ---------------------------------------------------------------------------
+// Library search paths — tell the linker where to find the .a files
+// ---------------------------------------------------------------------------
+LIBRARY_SEARCH_PATHS = $(inherited) \
+    $(PROJECT_DIR)/libs/install-ios/lib \
+    $(PROJECT_DIR)/libs/cyclonedds/lib
+
+// ---------------------------------------------------------------------------
+// Linked libraries
+//
+// -force_load is used for libraries that register static initialisers or use
+// the "weak-symbol / plugin" pattern (rmw, rcl, rclcpp, rmw_cyclonedds_cpp).
+// All other libs use plain -l flags so the linker dead-strips unused symbols.
+// ---------------------------------------------------------------------------
+OTHER_LDFLAGS = $(inherited) \
+    -lc++ \
+    -lz \
+    -lresolv \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librclcpp.a \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librcl.a \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librmw.a \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librmw_cyclonedds_cpp.a \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librmw_dds_common.a \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librosidl_typesupport_c.a \
+    -force_load $(PROJECT_DIR)/libs/install-ios/lib/librosidl_typesupport_cpp.a \
+    -force_load $(PROJECT_DIR)/libs/cyclonedds/lib/libddsc.a \
+    -lament_index_cpp \
+    -lbuiltin_interfaces__rosidl_generator_c \
+    -lbuiltin_interfaces__rosidl_typesupport_c \
+    -lbuiltin_interfaces__rosidl_typesupport_cpp \
+    -lbuiltin_interfaces__rosidl_typesupport_introspection_c \
+    -lbuiltin_interfaces__rosidl_typesupport_introspection_cpp \
+    -llibstatistics_collector \
+    -lrcl_interfaces__rosidl_generator_c \
+    -lrcl_interfaces__rosidl_typesupport_c \
+    -lrcl_interfaces__rosidl_typesupport_cpp \
+    -lrcl_interfaces__rosidl_typesupport_introspection_c \
+    -lrcl_interfaces__rosidl_typesupport_introspection_cpp \
+    -lrcl_logging_interface \
+    -lrcl_logging_noop \
+    -lrcl_yaml_param_parser \
+    -lrcpputils \
+    -lrcutils \
+    -lrmw_dds_common__rosidl_generator_c \
+    -lrmw_dds_common__rosidl_typesupport_c \
+    -lrmw_dds_common__rosidl_typesupport_cpp \
+    -lrmw_dds_common__rosidl_typesupport_introspection_c \
+    -lrmw_dds_common__rosidl_typesupport_introspection_cpp \
+    -lrosgraph_msgs__rosidl_generator_c \
+    -lrosgraph_msgs__rosidl_typesupport_c \
+    -lrosgraph_msgs__rosidl_typesupport_cpp \
+    -lrosgraph_msgs__rosidl_typesupport_introspection_c \
+    -lrosgraph_msgs__rosidl_typesupport_introspection_cpp \
+    -lrosidl_dynamic_typesupport \
+    -lrosidl_runtime_c \
+    -lrosidl_typesupport_introspection_c \
+    -lrosidl_typesupport_introspection_cpp \
+    -lservice_msgs__rosidl_generator_c \
+    -lservice_msgs__rosidl_typesupport_c \
+    -lservice_msgs__rosidl_typesupport_cpp \
+    -lservice_msgs__rosidl_typesupport_introspection_c \
+    -lservice_msgs__rosidl_typesupport_introspection_cpp \
+    -lstatistics_msgs__rosidl_generator_c \
+    -lstatistics_msgs__rosidl_typesupport_c \
+    -lstatistics_msgs__rosidl_typesupport_cpp \
+    -lstatistics_msgs__rosidl_typesupport_introspection_c \
+    -lstatistics_msgs__rosidl_typesupport_introspection_cpp \
+    -lstd_msgs__rosidl_generator_c \
+    -lstd_msgs__rosidl_typesupport_c \
+    -lstd_msgs__rosidl_typesupport_cpp \
+    -lstd_msgs__rosidl_typesupport_introspection_c \
+    -lstd_msgs__rosidl_typesupport_introspection_cpp \
+    -ltype_description_interfaces__rosidl_generator_c \
+    -ltype_description_interfaces__rosidl_typesupport_c \
+    -ltype_description_interfaces__rosidl_typesupport_cpp \
+    -ltype_description_interfaces__rosidl_typesupport_introspection_c \
+    -ltype_description_interfaces__rosidl_typesupport_introspection_cpp \
+    -lyaml

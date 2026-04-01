@@ -6,15 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2383BB0E2F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD32F7D582A005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_c.a */; };
+		2383BB0F2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD42F7D582A005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB102F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD52F7D582A005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_c.a */; };
+		2383BB112F7D582B005B2845 /* librosidl_dynamic_typesupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD62F7D582A005B2845 /* librosidl_dynamic_typesupport.a */; };
+		2383BB122F7D582B005B2845 /* libyaml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD72F7D582A005B2845 /* libyaml.a */; };
+		2383BB132F7D582B005B2845 /* libstatistics_msgs__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD82F7D582A005B2845 /* libstatistics_msgs__rosidl_generator_c.a */; };
+		2383BB142F7D582B005B2845 /* librosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAD92F7D582A005B2845 /* librosidl_typesupport_cpp.a */; };
+		2383BB152F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BADA2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_cpp.a */; };
+		2383BB162F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BADB2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_c.a */; };
+		2383BB172F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BADC2F7D582A005B2845 /* libstatistics_msgs__rosidl_typesupport_cpp.a */; };
+		2383BB182F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BADD2F7D582A005B2845 /* libstd_msgs__rosidl_typesupport_introspection_c.a */; };
+		2383BB192F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BADE2F7D582A005B2845 /* librmw_dds_common__rosidl_typesupport_cpp.a */; };
+		2383BB1A2F7D582B005B2845 /* librosidl_runtime_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BADF2F7D582A005B2845 /* librosidl_runtime_c.a */; };
+		2383BB1B2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE02F7D582A005B2845 /* libservice_msgs__rosidl_typesupport_cpp.a */; };
+		2383BB1C2F7D582B005B2845 /* libtype_description_interfaces__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE12F7D582A005B2845 /* libtype_description_interfaces__rosidl_generator_c.a */; };
+		2383BB1D2F7D582B005B2845 /* libbuiltin_interfaces__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE22F7D582A005B2845 /* libbuiltin_interfaces__rosidl_generator_c.a */; };
+		2383BB1E2F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE32F7D582A005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB1F2F7D582B005B2845 /* libservice_msgs__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE42F7D582A005B2845 /* libservice_msgs__rosidl_generator_c.a */; };
+		2383BB202F7D582B005B2845 /* libstd_msgs__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE52F7D582A005B2845 /* libstd_msgs__rosidl_generator_c.a */; };
+		2383BB212F7D582B005B2845 /* libament_index_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE62F7D582A005B2845 /* libament_index_cpp.a */; };
+		2383BB222F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE72F7D582A005B2845 /* libstd_msgs__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB232F7D582B005B2845 /* librmw_dds_common__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE82F7D582A005B2845 /* librmw_dds_common__rosidl_generator_c.a */; };
+		2383BB242F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAE92F7D582A005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_c.a */; };
+		2383BB252F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAEA2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB262F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAEB2F7D582A005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB272F7D582B005B2845 /* librcl_logging_interface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAEC2F7D582A005B2845 /* librcl_logging_interface.a */; };
+		2383BB282F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAED2F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_cpp.a */; };
+		2383BB292F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAEE2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_c.a */; };
+		2383BB2A2F7D582B005B2845 /* librmw_dds_common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAEF2F7D582B005B2845 /* librmw_dds_common.a */; };
+		2383BB2B2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF02F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_c.a */; };
+		2383BB2C2F7D582B005B2845 /* librclcpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF12F7D582B005B2845 /* librclcpp.a */; };
+		2383BB2D2F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF22F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_c.a */; };
+		2383BB2E2F7D582B005B2845 /* librmw_cyclonedds_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF32F7D582B005B2845 /* librmw_cyclonedds_cpp.a */; };
+		2383BB2F2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF42F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB302F7D582B005B2845 /* librmw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF52F7D582B005B2845 /* librmw.a */; };
+		2383BB312F7D582B005B2845 /* librosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF62F7D582B005B2845 /* librosidl_typesupport_introspection_c.a */; };
+		2383BB322F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF72F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_c.a */; };
+		2383BB332F7D582B005B2845 /* librosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF82F7D582B005B2845 /* librosidl_typesupport_c.a */; };
+		2383BB342F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAF92F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_cpp.a */; };
+		2383BB352F7D582B005B2845 /* librcl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAFA2F7D582B005B2845 /* librcl.a */; };
+		2383BB362F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAFB2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_cpp.a */; };
+		2383BB372F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAFC2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_c.a */; };
+		2383BB382F7D582B005B2845 /* librcl_logging_noop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAFD2F7D582B005B2845 /* librcl_logging_noop.a */; };
+		2383BB392F7D582B005B2845 /* librcutils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAFE2F7D582B005B2845 /* librcutils.a */; };
+		2383BB3A2F7D582B005B2845 /* librcl_yaml_param_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BAFF2F7D582B005B2845 /* librcl_yaml_param_parser.a */; };
+		2383BB3B2F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB002F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_c.a */; };
+		2383BB3C2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB012F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_c.a */; };
+		2383BB3D2F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB022F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_c.a */; };
+		2383BB3E2F7D582B005B2845 /* librcl_interfaces__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB032F7D582B005B2845 /* librcl_interfaces__rosidl_generator_c.a */; };
+		2383BB3F2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB042F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_c.a */; };
+		2383BB402F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB052F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_c.a */; };
+		2383BB412F7D582B005B2845 /* librosgraph_msgs__rosidl_generator_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB062F7D582B005B2845 /* librosgraph_msgs__rosidl_generator_c.a */; };
+		2383BB422F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB072F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_c.a */; };
+		2383BB432F7D582B005B2845 /* librcpputils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB082F7D582B005B2845 /* librcpputils.a */; };
+		2383BB442F7D582B005B2845 /* librosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB092F7D582B005B2845 /* librosidl_typesupport_introspection_cpp.a */; };
+		2383BB452F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB0A2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_cpp.a */; };
+		2383BB462F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB0B2F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB472F7D582B005B2845 /* liblibstatistics_collector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB0C2F7D582B005B2845 /* liblibstatistics_collector.a */; };
+		2383BB482F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB0D2F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_cpp.a */; };
+		2383BB4A2F7D5871005B2845 /* libddsc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB492F7D5871005B2845 /* libddsc.a */; };
+		2383BB4C2F7D58A3005B2845 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB4B2F7D58A3005B2845 /* libresolv.tbd */; };
+		2383BB4E2F7D58A9005B2845 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB4D2F7D58A9005B2845 /* libz.tbd */; };
+		2383BB502F7D58B0005B2845 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB4F2F7D58B0005B2845 /* Network.framework */; };
+		2383BB522F7D58B5005B2845 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB512F7D58B5005B2845 /* SystemConfiguration.framework */; };
+		2383BB542F7D58C0005B2845 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2383BB532F7D58C0005B2845 /* libc++.tbd */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2383BAB12F7D52FA005B2845 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2383BA9B2F7D52F7005B2845 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2383BAA22F7D52F7005B2845;
-			remoteInfo = vterm;
-		};
-		2383BABB2F7D52FA005B2845 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2383BA9B2F7D52F7005B2845 /* Project object */;
 			proxyType = 1;
@@ -26,7 +87,72 @@
 /* Begin PBXFileReference section */
 		2383BAA32F7D52F7005B2845 /* vterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2383BAB02F7D52FA005B2845 /* vtermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vtermTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2383BABA2F7D52FA005B2845 /* vtermUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vtermUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2383BAD32F7D582A005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_dds_common__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_dds_common__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BAD42F7D582A005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_interfaces__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BAD52F7D582A005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstatistics_msgs__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BAD62F7D582A005B2845 /* librosidl_dynamic_typesupport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosidl_dynamic_typesupport.a; path = "../../ros2-ios/deps/install-ios/lib/librosidl_dynamic_typesupport.a"; sourceTree = "<group>"; };
+		2383BAD72F7D582A005B2845 /* libyaml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyaml.a; path = "../../ros2-ios/deps/install-ios/lib/libyaml.a"; sourceTree = "<group>"; };
+		2383BAD82F7D582A005B2845 /* libstatistics_msgs__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstatistics_msgs__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/libstatistics_msgs__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BAD92F7D582A005B2845 /* librosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BADA2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbuiltin_interfaces__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BADB2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbuiltin_interfaces__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BADC2F7D582A005B2845 /* libstatistics_msgs__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstatistics_msgs__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libstatistics_msgs__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BADD2F7D582A005B2845 /* libstd_msgs__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstd_msgs__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/libstd_msgs__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BADE2F7D582A005B2845 /* librmw_dds_common__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_dds_common__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_dds_common__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BADF2F7D582A005B2845 /* librosidl_runtime_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosidl_runtime_c.a; path = "../../ros2-ios/deps/install-ios/lib/librosidl_runtime_c.a"; sourceTree = "<group>"; };
+		2383BAE02F7D582A005B2845 /* libservice_msgs__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libservice_msgs__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libservice_msgs__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BAE12F7D582A005B2845 /* libtype_description_interfaces__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtype_description_interfaces__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/libtype_description_interfaces__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BAE22F7D582A005B2845 /* libbuiltin_interfaces__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbuiltin_interfaces__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/libbuiltin_interfaces__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BAE32F7D582A005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosgraph_msgs__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BAE42F7D582A005B2845 /* libservice_msgs__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libservice_msgs__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/libservice_msgs__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BAE52F7D582A005B2845 /* libstd_msgs__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstd_msgs__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/libstd_msgs__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BAE62F7D582A005B2845 /* libament_index_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libament_index_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libament_index_cpp.a"; sourceTree = "<group>"; };
+		2383BAE72F7D582A005B2845 /* libstd_msgs__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstd_msgs__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BAE82F7D582A005B2845 /* librmw_dds_common__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_dds_common__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_dds_common__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BAE92F7D582A005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_interfaces__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_interfaces__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BAEA2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BAEB2F7D582A005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BAEC2F7D582A005B2845 /* librcl_logging_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_logging_interface.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_logging_interface.a"; sourceTree = "<group>"; };
+		2383BAED2F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosgraph_msgs__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librosgraph_msgs__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BAEE2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_interfaces__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_interfaces__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BAEF2F7D582B005B2845 /* librmw_dds_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_dds_common.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_dds_common.a"; sourceTree = "<group>"; };
+		2383BAF02F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtype_description_interfaces__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/libtype_description_interfaces__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BAF12F7D582B005B2845 /* librclcpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librclcpp.a; path = "../../ros2-ios/deps/install-ios/lib/librclcpp.a"; sourceTree = "<group>"; };
+		2383BAF22F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstd_msgs__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/libstd_msgs__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BAF32F7D582B005B2845 /* librmw_cyclonedds_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_cyclonedds_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_cyclonedds_cpp.a"; sourceTree = "<group>"; };
+		2383BAF42F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libservice_msgs__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libservice_msgs__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BAF52F7D582B005B2845 /* librmw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw.a; path = "../../ros2-ios/deps/install-ios/lib/librmw.a"; sourceTree = "<group>"; };
+		2383BAF62F7D582B005B2845 /* librosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/librosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BAF72F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_dds_common__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_dds_common__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BAF82F7D582B005B2845 /* librosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/librosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BAF92F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstd_msgs__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libstd_msgs__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BAFA2F7D582B005B2845 /* librcl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl.a; path = "../../ros2-ios/deps/install-ios/lib/librcl.a"; sourceTree = "<group>"; };
+		2383BAFB2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtype_description_interfaces__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libtype_description_interfaces__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BAFC2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtype_description_interfaces__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/libtype_description_interfaces__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BAFD2F7D582B005B2845 /* librcl_logging_noop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_logging_noop.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_logging_noop.a"; sourceTree = "<group>"; };
+		2383BAFE2F7D582B005B2845 /* librcutils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcutils.a; path = "../../ros2-ios/deps/install-ios/lib/librcutils.a"; sourceTree = "<group>"; };
+		2383BAFF2F7D582B005B2845 /* librcl_yaml_param_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_yaml_param_parser.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_yaml_param_parser.a"; sourceTree = "<group>"; };
+		2383BB002F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbuiltin_interfaces__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/libbuiltin_interfaces__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BB012F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libservice_msgs__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/libservice_msgs__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BB022F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstatistics_msgs__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/libstatistics_msgs__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BB032F7D582B005B2845 /* librcl_interfaces__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_interfaces__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_interfaces__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BB042F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libservice_msgs__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/libservice_msgs__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BB052F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosgraph_msgs__rosidl_typesupport_introspection_c.a; path = "../../ros2-ios/deps/install-ios/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.a"; sourceTree = "<group>"; };
+		2383BB062F7D582B005B2845 /* librosgraph_msgs__rosidl_generator_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosgraph_msgs__rosidl_generator_c.a; path = "../../ros2-ios/deps/install-ios/lib/librosgraph_msgs__rosidl_generator_c.a"; sourceTree = "<group>"; };
+		2383BB072F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosgraph_msgs__rosidl_typesupport_c.a; path = "../../ros2-ios/deps/install-ios/lib/librosgraph_msgs__rosidl_typesupport_c.a"; sourceTree = "<group>"; };
+		2383BB082F7D582B005B2845 /* librcpputils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcpputils.a; path = "../../ros2-ios/deps/install-ios/lib/librcpputils.a"; sourceTree = "<group>"; };
+		2383BB092F7D582B005B2845 /* librosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BB0A2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librcl_interfaces__rosidl_typesupport_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librcl_interfaces__rosidl_typesupport_cpp.a"; sourceTree = "<group>"; };
+		2383BB0B2F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstatistics_msgs__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BB0C2F7D582B005B2845 /* liblibstatistics_collector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibstatistics_collector.a; path = "../../ros2-ios/deps/install-ios/lib/liblibstatistics_collector.a"; sourceTree = "<group>"; };
+		2383BB0D2F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librmw_dds_common__rosidl_typesupport_introspection_cpp.a; path = "../../ros2-ios/deps/install-ios/lib/librmw_dds_common__rosidl_typesupport_introspection_cpp.a"; sourceTree = "<group>"; };
+		2383BB492F7D5871005B2845 /* libddsc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libddsc.a; path = "../../ros2-ios/deps/install/lib/libddsc.a"; sourceTree = "<group>"; };
+		2383BB4B2F7D58A3005B2845 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		2383BB4D2F7D58A9005B2845 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2383BB4F2F7D58B0005B2845 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		2383BB512F7D58B5005B2845 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2383BB532F7D58C0005B2845 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AA001122334455667788AA01 /* ROS2.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ROS2.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,9 +166,9 @@
 			path = vtermTests;
 			sourceTree = "<group>";
 		};
-		2383BABD2F7D52FA005B2845 /* vtermUITests */ = {
+		2383BACD2F7D5626005B2845 /* libs */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = vtermUITests;
+			path = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,17 +178,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2383BB542F7D58C0005B2845 /* libc++.tbd in Frameworks */,
+				2383BB522F7D58B5005B2845 /* SystemConfiguration.framework in Frameworks */,
+				2383BB502F7D58B0005B2845 /* Network.framework in Frameworks */,
+				2383BB4E2F7D58A9005B2845 /* libz.tbd in Frameworks */,
+				2383BB4C2F7D58A3005B2845 /* libresolv.tbd in Frameworks */,
+				2383BB4A2F7D5871005B2845 /* libddsc.a in Frameworks */,
+				2383BB0E2F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB0F2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB102F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB112F7D582B005B2845 /* librosidl_dynamic_typesupport.a in Frameworks */,
+				2383BB122F7D582B005B2845 /* libyaml.a in Frameworks */,
+				2383BB132F7D582B005B2845 /* libstatistics_msgs__rosidl_generator_c.a in Frameworks */,
+				2383BB142F7D582B005B2845 /* librosidl_typesupport_cpp.a in Frameworks */,
+				2383BB152F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB162F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB172F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB182F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB192F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB1A2F7D582B005B2845 /* librosidl_runtime_c.a in Frameworks */,
+				2383BB1B2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB1C2F7D582B005B2845 /* libtype_description_interfaces__rosidl_generator_c.a in Frameworks */,
+				2383BB1D2F7D582B005B2845 /* libbuiltin_interfaces__rosidl_generator_c.a in Frameworks */,
+				2383BB1E2F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB1F2F7D582B005B2845 /* libservice_msgs__rosidl_generator_c.a in Frameworks */,
+				2383BB202F7D582B005B2845 /* libstd_msgs__rosidl_generator_c.a in Frameworks */,
+				2383BB212F7D582B005B2845 /* libament_index_cpp.a in Frameworks */,
+				2383BB222F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB232F7D582B005B2845 /* librmw_dds_common__rosidl_generator_c.a in Frameworks */,
+				2383BB242F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB252F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB262F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB272F7D582B005B2845 /* librcl_logging_interface.a in Frameworks */,
+				2383BB282F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB292F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_c.a in Frameworks */,
+				2383BB2A2F7D582B005B2845 /* librmw_dds_common.a in Frameworks */,
+				2383BB2B2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB2C2F7D582B005B2845 /* librclcpp.a in Frameworks */,
+				2383BB2D2F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_c.a in Frameworks */,
+				2383BB2E2F7D582B005B2845 /* librmw_cyclonedds_cpp.a in Frameworks */,
+				2383BB2F2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB302F7D582B005B2845 /* librmw.a in Frameworks */,
+				2383BB312F7D582B005B2845 /* librosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB322F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_c.a in Frameworks */,
+				2383BB332F7D582B005B2845 /* librosidl_typesupport_c.a in Frameworks */,
+				2383BB342F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB352F7D582B005B2845 /* librcl.a in Frameworks */,
+				2383BB362F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB372F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_c.a in Frameworks */,
+				2383BB382F7D582B005B2845 /* librcl_logging_noop.a in Frameworks */,
+				2383BB392F7D582B005B2845 /* librcutils.a in Frameworks */,
+				2383BB3A2F7D582B005B2845 /* librcl_yaml_param_parser.a in Frameworks */,
+				2383BB3B2F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_c.a in Frameworks */,
+				2383BB3C2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB3D2F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_c.a in Frameworks */,
+				2383BB3E2F7D582B005B2845 /* librcl_interfaces__rosidl_generator_c.a in Frameworks */,
+				2383BB3F2F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_c.a in Frameworks */,
+				2383BB402F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_c.a in Frameworks */,
+				2383BB412F7D582B005B2845 /* librosgraph_msgs__rosidl_generator_c.a in Frameworks */,
+				2383BB422F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_c.a in Frameworks */,
+				2383BB432F7D582B005B2845 /* librcpputils.a in Frameworks */,
+				2383BB442F7D582B005B2845 /* librosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB452F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_cpp.a in Frameworks */,
+				2383BB462F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_cpp.a in Frameworks */,
+				2383BB472F7D582B005B2845 /* liblibstatistics_collector.a in Frameworks */,
+				2383BB482F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_cpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2383BAAD2F7D52FA005B2845 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2383BAB72F7D52FA005B2845 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,9 +259,11 @@
 		2383BA9A2F7D52F7005B2845 = {
 			isa = PBXGroup;
 			children = (
+				AA001122334455667788AA01 /* ROS2.xcconfig */,
+				2383BACD2F7D5626005B2845 /* libs */,
 				2383BAA52F7D52F7005B2845 /* vterm */,
 				2383BAB32F7D52FA005B2845 /* vtermTests */,
-				2383BABD2F7D52FA005B2845 /* vtermUITests */,
+				2383BAD22F7D582A005B2845 /* Frameworks */,
 				2383BAA42F7D52F7005B2845 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,9 +273,80 @@
 			children = (
 				2383BAA32F7D52F7005B2845 /* vterm.app */,
 				2383BAB02F7D52FA005B2845 /* vtermTests.xctest */,
-				2383BABA2F7D52FA005B2845 /* vtermUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2383BAD22F7D582A005B2845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2383BB532F7D58C0005B2845 /* libc++.tbd */,
+				2383BB512F7D58B5005B2845 /* SystemConfiguration.framework */,
+				2383BB4F2F7D58B0005B2845 /* Network.framework */,
+				2383BB4D2F7D58A9005B2845 /* libz.tbd */,
+				2383BB4B2F7D58A3005B2845 /* libresolv.tbd */,
+				2383BB492F7D5871005B2845 /* libddsc.a */,
+				2383BAE62F7D582A005B2845 /* libament_index_cpp.a */,
+				2383BAE22F7D582A005B2845 /* libbuiltin_interfaces__rosidl_generator_c.a */,
+				2383BB002F7D582B005B2845 /* libbuiltin_interfaces__rosidl_typesupport_c.a */,
+				2383BADA2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_cpp.a */,
+				2383BADB2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_c.a */,
+				2383BAEA2F7D582A005B2845 /* libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.a */,
+				2383BB0C2F7D582B005B2845 /* liblibstatistics_collector.a */,
+				2383BAFA2F7D582B005B2845 /* librcl.a */,
+				2383BB032F7D582B005B2845 /* librcl_interfaces__rosidl_generator_c.a */,
+				2383BAEE2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_c.a */,
+				2383BB0A2F7D582B005B2845 /* librcl_interfaces__rosidl_typesupport_cpp.a */,
+				2383BAE92F7D582A005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_c.a */,
+				2383BAD42F7D582A005B2845 /* librcl_interfaces__rosidl_typesupport_introspection_cpp.a */,
+				2383BAEC2F7D582A005B2845 /* librcl_logging_interface.a */,
+				2383BAFD2F7D582B005B2845 /* librcl_logging_noop.a */,
+				2383BAFF2F7D582B005B2845 /* librcl_yaml_param_parser.a */,
+				2383BAF12F7D582B005B2845 /* librclcpp.a */,
+				2383BB082F7D582B005B2845 /* librcpputils.a */,
+				2383BAFE2F7D582B005B2845 /* librcutils.a */,
+				2383BAF52F7D582B005B2845 /* librmw.a */,
+				2383BAF32F7D582B005B2845 /* librmw_cyclonedds_cpp.a */,
+				2383BAEF2F7D582B005B2845 /* librmw_dds_common.a */,
+				2383BAE82F7D582A005B2845 /* librmw_dds_common__rosidl_generator_c.a */,
+				2383BAF72F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_c.a */,
+				2383BADE2F7D582A005B2845 /* librmw_dds_common__rosidl_typesupport_cpp.a */,
+				2383BAD32F7D582A005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_c.a */,
+				2383BB0D2F7D582B005B2845 /* librmw_dds_common__rosidl_typesupport_introspection_cpp.a */,
+				2383BB062F7D582B005B2845 /* librosgraph_msgs__rosidl_generator_c.a */,
+				2383BB072F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_c.a */,
+				2383BAED2F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_cpp.a */,
+				2383BB052F7D582B005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_c.a */,
+				2383BAE32F7D582A005B2845 /* librosgraph_msgs__rosidl_typesupport_introspection_cpp.a */,
+				2383BAD62F7D582A005B2845 /* librosidl_dynamic_typesupport.a */,
+				2383BADF2F7D582A005B2845 /* librosidl_runtime_c.a */,
+				2383BAF82F7D582B005B2845 /* librosidl_typesupport_c.a */,
+				2383BAD92F7D582A005B2845 /* librosidl_typesupport_cpp.a */,
+				2383BAF62F7D582B005B2845 /* librosidl_typesupport_introspection_c.a */,
+				2383BB092F7D582B005B2845 /* librosidl_typesupport_introspection_cpp.a */,
+				2383BAE42F7D582A005B2845 /* libservice_msgs__rosidl_generator_c.a */,
+				2383BB042F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_c.a */,
+				2383BAE02F7D582A005B2845 /* libservice_msgs__rosidl_typesupport_cpp.a */,
+				2383BB012F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_c.a */,
+				2383BAF42F7D582B005B2845 /* libservice_msgs__rosidl_typesupport_introspection_cpp.a */,
+				2383BAD82F7D582A005B2845 /* libstatistics_msgs__rosidl_generator_c.a */,
+				2383BB022F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_c.a */,
+				2383BADC2F7D582A005B2845 /* libstatistics_msgs__rosidl_typesupport_cpp.a */,
+				2383BAD52F7D582A005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_c.a */,
+				2383BB0B2F7D582B005B2845 /* libstatistics_msgs__rosidl_typesupport_introspection_cpp.a */,
+				2383BAE52F7D582A005B2845 /* libstd_msgs__rosidl_generator_c.a */,
+				2383BAF22F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_c.a */,
+				2383BAF92F7D582B005B2845 /* libstd_msgs__rosidl_typesupport_cpp.a */,
+				2383BADD2F7D582A005B2845 /* libstd_msgs__rosidl_typesupport_introspection_c.a */,
+				2383BAE72F7D582A005B2845 /* libstd_msgs__rosidl_typesupport_introspection_cpp.a */,
+				2383BAE12F7D582A005B2845 /* libtype_description_interfaces__rosidl_generator_c.a */,
+				2383BAFC2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_c.a */,
+				2383BAFB2F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_cpp.a */,
+				2383BAF02F7D582B005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_c.a */,
+				2383BAEB2F7D582A005B2845 /* libtype_description_interfaces__rosidl_typesupport_introspection_cpp.a */,
+				2383BAD72F7D582A005B2845 /* libyaml.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +366,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				2383BAA52F7D52F7005B2845 /* vterm */,
+				2383BACD2F7D5626005B2845 /* libs */,
 			);
 			name = vterm;
 			packageProductDependencies = (
@@ -140,29 +398,6 @@
 			productReference = 2383BAB02F7D52FA005B2845 /* vtermTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2383BAB92F7D52FA005B2845 /* vtermUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2383BACA2F7D52FA005B2845 /* Build configuration list for PBXNativeTarget "vtermUITests" */;
-			buildPhases = (
-				2383BAB62F7D52FA005B2845 /* Sources */,
-				2383BAB72F7D52FA005B2845 /* Frameworks */,
-				2383BAB82F7D52FA005B2845 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2383BABC2F7D52FA005B2845 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				2383BABD2F7D52FA005B2845 /* vtermUITests */,
-			);
-			name = vtermUITests;
-			packageProductDependencies = (
-			);
-			productName = vtermUITests;
-			productReference = 2383BABA2F7D52FA005B2845 /* vtermUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +412,6 @@
 						CreatedOnToolsVersion = 26.1.1;
 					};
 					2383BAAF2F7D52FA005B2845 = {
-						CreatedOnToolsVersion = 26.1.1;
-						TestTargetID = 2383BAA22F7D52F7005B2845;
-					};
-					2383BAB92F7D52FA005B2845 = {
 						CreatedOnToolsVersion = 26.1.1;
 						TestTargetID = 2383BAA22F7D52F7005B2845;
 					};
@@ -202,7 +433,6 @@
 			targets = (
 				2383BAA22F7D52F7005B2845 /* vterm */,
 				2383BAAF2F7D52FA005B2845 /* vtermTests */,
-				2383BAB92F7D52FA005B2845 /* vtermUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,13 +446,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2383BAAE2F7D52FA005B2845 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2383BAB82F7D52FA005B2845 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +469,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2383BAB62F7D52FA005B2845 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +476,6 @@
 			isa = PBXTargetDependency;
 			target = 2383BAA22F7D52F7005B2845 /* vterm */;
 			targetProxy = 2383BAB12F7D52FA005B2845 /* PBXContainerItemProxy */;
-		};
-		2383BABC2F7D52FA005B2845 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2383BAA22F7D52F7005B2845 /* vterm */;
-			targetProxy = 2383BABB2F7D52FA005B2845 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,6 +603,7 @@
 		};
 		2383BAC52F7D52FA005B2845 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA001122334455667788AA01 /* ROS2.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -405,6 +617,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,17 +626,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.vinayakv.vterm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2383BAC62F7D52FA005B2845 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA001122334455667788AA01 /* ROS2.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,20 +655,26 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.vinayakv.vterm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -462,16 +686,21 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZZ37DSY348;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.vinayakv.vtermTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vterm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/vterm";
 			};
 			name = Debug;
@@ -484,57 +713,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZZ37DSY348;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.vinayakv.vtermTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vterm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/vterm";
-			};
-			name = Release;
-		};
-		2383BACB2F7D52FA005B2845 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZZ37DSY348;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.vinayakv.vtermUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = vterm;
-			};
-			name = Debug;
-		};
-		2383BACC2F7D52FA005B2845 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZZ37DSY348;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.vinayakv.vtermUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = vterm;
 			};
 			name = Release;
 		};
@@ -564,15 +758,6 @@
 			buildConfigurations = (
 				2383BAC82F7D52FA005B2845 /* Debug */,
 				2383BAC92F7D52FA005B2845 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2383BACA2F7D52FA005B2845 /* Build configuration list for PBXNativeTarget "vtermUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2383BACB2F7D52FA005B2845 /* Debug */,
-				2383BACC2F7D52FA005B2845 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
