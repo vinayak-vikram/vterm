@@ -95,6 +95,15 @@ final class ROSContext {
         )
     }
 
+    // remove a node from executor
+    func removeNode(_ node: ROSNode) {
+        guard let exec = executor else { return }
+        rosios_executor_remove_node(
+            UnsafeMutableRawPointer(exec),
+            UnsafeMutableRawPointer(node.handle)
+        )
+    }
+
     // stop the executor and shut down rclcpp
     func stop() {
         lock.lock()

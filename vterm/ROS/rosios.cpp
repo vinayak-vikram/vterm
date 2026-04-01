@@ -155,6 +155,13 @@ extern "C" void rosios_executor_add_node(rosios_executor_t exec, rosios_node_t n
     e->executor->add_node(n->node);
 }
 
+extern "C" void rosios_executor_remove_node(rosios_executor_t exec, rosios_node_t node) {
+    if (!exec || !node) return;
+    auto* e = static_cast<ROSExecutor*>(exec);
+    auto* n = static_cast<ROSNode*>(node);
+    e->executor->remove_node(n->node);
+}
+
 extern "C" void rosios_spin(rosios_executor_t exec) {
     if (!exec) return;
     auto* e = static_cast<ROSExecutor*>(exec);

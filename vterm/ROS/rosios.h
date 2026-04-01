@@ -77,6 +77,9 @@ rosios_executor_t rosios_create_executor(void);
 // add a node to the executor.
 void rosios_executor_add_node(rosios_executor_t exec, rosios_node_t node);
 
+// remove a node from the executor.
+void rosios_executor_remove_node(rosios_executor_t exec, rosios_node_t node);
+
 // spin the executor (blocking until rosios_spin_stop is called)
 void rosios_spin(rosios_executor_t exec);
 
