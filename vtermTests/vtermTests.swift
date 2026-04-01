@@ -40,19 +40,19 @@ struct ROSTests {
 
     // MARK: - 3. Publisher
 
-    @Test func publisherCreation() {
+    @Test func publisherCreation() throws {
         let node = ROSNode(name: "t_pub_\(uid())")
         ROSContext.shared.addNode(node)
-        let pub = ROSStringPublisher(node: node, topic: "/t_pub_\(uid())")
-        _ = pub   // reaching here without fatalError = success
+        let pub = try ROSStringPublisher(node: node, topic: "/t_pub_\(uid())")
+        _ = pub
     }
 
     // MARK: - 4. Subscriber
 
-    @Test func subscriberCreation() {
+    @Test func subscriberCreation() throws {
         let node = ROSNode(name: "t_sub_\(uid())")
         ROSContext.shared.addNode(node)
-        let sub = ROSStringSubscriber(node: node, topic: "/t_sub_\(uid())") { _ in }
+        let sub = try ROSStringSubscriber(node: node, topic: "/t_sub_\(uid())") { _ in }
         _ = sub
     }
 
@@ -70,9 +70,9 @@ struct ROSTests {
         let node = ROSNode(name: "t_loop_\(uid())")
         ROSContext.shared.addNode(node)
 
-        let pub = ROSStringPublisher(node: node, topic: topic)
+        let pub = try ROSStringPublisher(node: node, topic: topic)
         var sub: ROSStringSubscriber?
-        sub = ROSStringSubscriber(node: node, topic: topic) { msg in
+        sub = try ROSStringSubscriber(node: node, topic: topic) { msg in
             continuation.yield(msg)
             _ = sub
         }
@@ -98,9 +98,9 @@ struct ROSTests {
         let node = ROSNode(name: "t_multi_\(uid())")
         ROSContext.shared.addNode(node)
 
-        let pub = ROSStringPublisher(node: node, topic: topic)
+        let pub = try ROSStringPublisher(node: node, topic: topic)
         var sub: ROSStringSubscriber?
-        sub = ROSStringSubscriber(node: node, topic: topic) { msg in
+        sub = try ROSStringSubscriber(node: node, topic: topic) { msg in
             continuation.yield(msg)
             _ = sub
         }
@@ -135,7 +135,7 @@ struct ROSTests {
         ROSContext.shared.addNode(node)
 
         var sub: ROSStringSubscriber?
-        sub = ROSStringSubscriber(node: node, topic: "/test_from_mac") { msg in
+        sub = try ROSStringSubscriber(node: node, topic: "/test_from_mac") { msg in
             continuation.yield(msg)
             _ = sub
         }
@@ -163,7 +163,7 @@ struct ROSTests {
     @Test func publishToMac() async throws {
         let node = ROSNode(name: "t_tx_mac_\(uid())")
         ROSContext.shared.addNode(node)
-        let pub = ROSStringPublisher(node: node, topic: "/test_from_ios")
+        let pub = try ROSStringPublisher(node: node, topic: "/test_from_ios")
 
         // allow DDS peer discovery
         try await Task.sleep(for: .seconds(1))

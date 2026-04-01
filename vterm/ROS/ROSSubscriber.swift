@@ -1,5 +1,19 @@
 import Foundation
 
+enum ROSError: Error, LocalizedError {
+    case nodeCreationFailed(String)
+    case publisherCreationFailed(String)
+    case subscriberCreationFailed(String)
+
+    var errorDescription: String? {
+        switch self {
+        case .nodeCreationFailed(let name):       return "Failed to create ROS node '\(name)'"
+        case .publisherCreationFailed(let topic): return "Failed to create publisher on '\(topic)'"
+        case .subscriberCreationFailed(let topic): return "Failed to create subscriber on '\(topic)'"
+        }
+    }
+}
+
 // closure box; keeps the Swift closure alive on the heap so it can be
 // referenced safely from the C callback
 
@@ -59,7 +73,7 @@ final class ROSStringSubscriber {
         topic: String,
         qosDepth: Int32 = 10,
         callback: @escaping (String) -> Void
-    ) {
+    ) throws {
         let box = ClosureBox(callback)
         self.callbackBox = box
 
@@ -74,9 +88,8 @@ final class ROSStringSubscriber {
             stringCallbackTrampoline,
             rawBox
         ) else {
-            // release the extra retain we just took before crashing
             Unmanaged.passUnretained(box).release()
-            fatalError("ROSStringSubscriber: failed to create subscription on '\(topic)'")
+            throw ROSError.subscriberCreationFailed(topic)
         }
         handle = OpaquePointer(raw)
     }

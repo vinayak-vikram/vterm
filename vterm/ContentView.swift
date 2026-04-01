@@ -6,18 +6,31 @@ final class PublishViewModel {
     var topic = "/chatter"
     var message = "Hello from iOS!"
     var isRunning = false
+    var isWarmingUp = false
+    var errorMessage: String?
 
     private var node: ROSNode?
     private var publisher: ROSStringPublisher?
 
     func start() {
         guard !isRunning else { return }
+        errorMessage = nil
         ROSContext.shared.start()
         let n = ROSNode(name: "vterm_pub_node")
         ROSContext.shared.addNode(n)
-        publisher = ROSStringPublisher(node: n, topic: topic)
-        node = n
-        isRunning = true
+        do {
+            publisher = try ROSStringPublisher(node: n, topic: topic)
+            node = n
+            isRunning = true
+            isWarmingUp = true
+            Task {
+                try? await Task.sleep(for: .seconds(1))
+                isWarmingUp = false
+            }
+        } catch {
+            ROSContext.shared.removeNode(n)
+            errorMessage = error.localizedDescription
+        }
     }
 
     func stop() {
@@ -57,11 +70,24 @@ struct PublishView: View {
                     .disabled(!vm.isRunning)
 
                 Button(action: vm.send) {
-                    Label("Publish", systemImage: "paperplane.fill")
-                        .frame(maxWidth: .infinity)
+                    if vm.isWarmingUp {
+                        Label("Discovering peers…", systemImage: "antenna.radiowaves.left.and.right")
+                            .frame(maxWidth: .infinity)
+                    } else {
+                        Label("Publish", systemImage: "paperplane.fill")
+                            .frame(maxWidth: .infinity)
+                    }
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(!vm.isRunning)
+                .disabled(!vm.isRunning || vm.isWarmingUp)
+            }
+
+            if let err = vm.errorMessage {
+                Section {
+                    Text(err)
+                        .foregroundStyle(.red)
+                        .font(.footnote)
+                }
             }
         }
         .navigationTitle("Publish")
@@ -74,24 +100,31 @@ final class SubscribeViewModel {
     var topic = "/chatter"
     var messages: [String] = []
     var isRunning = false
+    var errorMessage: String?
 
     private var node: ROSNode?
     private var subscriber: ROSStringSubscriber?
 
     func start() {
         guard !isRunning else { return }
+        errorMessage = nil
         ROSContext.shared.start()
         let n = ROSNode(name: "vterm_sub_node")
         ROSContext.shared.addNode(n)
-        subscriber = ROSStringSubscriber(node: n, topic: topic) { [weak self] msg in
-            Task { @MainActor [weak self] in
-                guard let self else { return }
-                messages.insert(msg, at: 0)
-                if messages.count > 100 { messages = Array(messages.prefix(100)) }
+        do {
+            subscriber = try ROSStringSubscriber(node: n, topic: topic) { [weak self] msg in
+                Task { @MainActor [weak self] in
+                    guard let self else { return }
+                    messages.insert(msg, at: 0)
+                    if messages.count > 100 { messages = Array(messages.prefix(100)) }
+                }
             }
+            node = n
+            isRunning = true
+        } catch {
+            ROSContext.shared.removeNode(n)
+            errorMessage = error.localizedDescription
         }
-        node = n
-        isRunning = true
     }
 
     func stop() {
@@ -143,6 +176,14 @@ struct SubscribeView: View {
                         Button("Clear", action: vm.clear)
                             .font(.caption)
                     }
+                }
+            }
+
+            if let err = vm.errorMessage {
+                Section {
+                    Text(err)
+                        .foregroundStyle(.red)
+                        .font(.footnote)
                 }
             }
         }

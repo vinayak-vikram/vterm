@@ -91,11 +91,29 @@ extern "C" rosios_publisher_t rosios_create_publisher_string(rosios_node_t node,
 }
 
 extern "C" void rosios_publish_string(rosios_publisher_t pub, const char* msg) {
-    if (!pub || !msg) return;
+    if (!pub || !msg) {
+        printf("[rosios] publish: null args\n");
+        return;
+    }
     auto* wrapper = static_cast<ROSPublisher*>(pub);
+    printf("[rosios] publish called: '%s', matched=%zu\n",
+           msg, wrapper->publisher->get_subscription_count());
     auto message = std_msgs::msg::String();
     message.data = std::string(msg);
-    wrapper->publisher->publish(message);
+    try {
+        wrapper->publisher->publish(message);
+        printf("[rosios] publish returned OK\n");
+    } catch (const std::exception& e) {
+        printf("[rosios] publish exception: %s\n", e.what());
+    } catch (...) {
+        printf("[rosios] publish unknown exception\n");
+    }
+}
+
+extern "C" int32_t rosios_publisher_subscription_count(rosios_publisher_t pub) {
+    if (!pub) return 0;
+    auto* wrapper = static_cast<ROSPublisher*>(pub);
+    return static_cast<int32_t>(wrapper->publisher->get_subscription_count());
 }
 
 extern "C" void rosios_destroy_publisher(rosios_publisher_t pub) {

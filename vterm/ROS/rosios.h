@@ -52,6 +52,9 @@ rosios_publisher_t rosios_create_publisher_string(rosios_node_t node,
 // Publish a null-terminated string message.
 void rosios_publish_string(rosios_publisher_t pub, const char* msg);
 
+// Returns the number of matched subscriptions for a publisher.
+int32_t rosios_publisher_subscription_count(rosios_publisher_t pub);
+
 // Destroy a publisher.
 void rosios_destroy_publisher(rosios_publisher_t pub);
 

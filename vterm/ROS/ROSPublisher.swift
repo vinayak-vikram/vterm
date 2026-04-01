@@ -19,13 +19,13 @@ final class ROSStringPublisher {
     //   topic:    ROS topic name (e.g. "/chatter")
     //   qosDepth: keep-last queue depth. Defaults to 10
     //      ^will probably add reliable/best effort stuff in the future
-    init(node: ROSNode, topic: String, qosDepth: Int32 = 10) {
+    init(node: ROSNode, topic: String, qosDepth: Int32 = 10) throws {
         guard let raw = rosios_create_publisher_string(
             UnsafeMutableRawPointer(node.handle),
             topic,
             qosDepth
         ) else {
-            fatalError("ROSStringPublisher: failed to create publisher on '\(topic)'")
+            throw ROSError.publisherCreationFailed(topic)
         }
         handle = OpaquePointer(raw)
     }
@@ -38,6 +38,8 @@ final class ROSStringPublisher {
 
     // publish a plain-text message (will extend)
     func publish(_ message: String) {
+        let subs = rosios_publisher_subscription_count(UnsafeMutableRawPointer(handle))
+        print("[ROSPublisher] matched subscriptions: \(subs)")
         rosios_publish_string(UnsafeMutableRawPointer(handle), message)
     }
 }
