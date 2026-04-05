@@ -3,6 +3,8 @@
 #include "rosios.h"
 
 #include <atomic>
+#include <cstdlib>
+#include <cstring>
 #include <memory>
 #include <string>
 
@@ -152,6 +154,38 @@ extern "C" rosios_subscription_t rosios_create_subscription_string(
 extern "C" void rosios_destroy_subscription(rosios_subscription_t sub) {
     if (!sub) return;
     delete static_cast<ROSSubscription*>(sub);
+}
+
+
+// list topics
+extern "C" char** rosios_get_topic_names(rosios_node_t node, int32_t* count_out) {
+    if (!node || !count_out) {
+        if (count_out) *count_out = 0;
+        return nullptr;
+    }
+    auto* n = static_cast<ROSNode*>(node);
+    try {
+        auto topics = n->node->get_topic_names_and_types();
+        *count_out = static_cast<int32_t>(topics.size());
+        if (topics.empty()) return nullptr;
+        char** result = static_cast<char**>(malloc(sizeof(char*) * topics.size()));
+        int32_t i = 0;
+        for (auto& [name, _] : topics) {
+            result[i] = static_cast<char*>(malloc(name.size() + 1));
+            strcpy(result[i], name.c_str());
+            ++i;
+        }
+        return result;
+    } catch (...) {
+        *count_out = 0;
+        return nullptr;
+    }
+}
+
+extern "C" void rosios_free_strings(char** strings, int32_t count) {
+    if (!strings) return;
+    for (int32_t i = 0; i < count; i++) free(strings[i]);
+    free(strings);
 }
 
 // MARK: executor

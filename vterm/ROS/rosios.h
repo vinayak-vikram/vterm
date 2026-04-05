@@ -72,6 +72,16 @@ rosios_subscription_t rosios_create_subscription_string(rosios_node_t node,
 // destroy a subscription
 void rosios_destroy_subscription(rosios_subscription_t sub);
 
+// topic list
+// returns an array of topic name strings discovered on the ROS graph.
+// count_out is set to the number of entries; caller must free the result with
+// rosios_free_strings.  Returns NULL (and count_out = 0) on failure or when
+// no topics are found.
+char** rosios_get_topic_names(rosios_node_t node, int32_t* count_out);
+
+// Free a string array returned by rosios_get_topic_names.
+void rosios_free_strings(char** strings, int32_t count);
+
 // MARK: executor
 
 // create a SingleThreadedExecutor.  returns NULL on failure

@@ -100,6 +100,8 @@ final class SubscribeViewModel {
     var topic = "/chatter"
     var messages: [String] = []
     var isRunning = false
+    var isFetchingTopics = false
+    var availableTopics: [String] = []
     var errorMessage: String?
 
     private var node: ROSNode?
@@ -137,6 +139,32 @@ final class SubscribeViewModel {
     func clear() {
         messages = []
     }
+
+    func fetchTopics() {
+        guard !isFetchingTopics else { return }
+        isFetchingTopics = true
+        Task {
+            ROSContext.shared.start()
+            let n = ROSNode(name: "vterm_graph_node")
+            ROSContext.shared.addNode(n)
+            // give the executor time to process SEDP announcements from peers.
+            try? await Task.sleep(for: .seconds(1))
+            var count: Int32 = 0
+            if let raw = rosios_get_topic_names(UnsafeMutableRawPointer(n.handle), &count),
+               count > 0 {
+                var names: [String] = []
+                for i in 0..<Int(count) {
+                    if let cstr = raw[i] { names.append(String(cString: cstr)) }
+                }
+                rosios_free_strings(raw, count)
+                availableTopics = names.sorted()
+            } else {
+                availableTopics = []
+            }
+            ROSContext.shared.removeNode(n)
+            isFetchingTopics = false
+        }
+    }
 }
 
 struct SubscribeView: View {
@@ -158,9 +186,44 @@ struct SubscribeView: View {
                 }
             }
 
+            if !vm.isRunning {
+                Section {
+                    if vm.isFetchingTopics {
+                        HStack {
+                            ProgressView()
+                            Text("Scanning…").foregroundStyle(.secondary)
+                        }
+                    } else if vm.availableTopics.isEmpty {
+                        Text("No topics found.")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(vm.availableTopics, id: \.self) { t in
+                            Button {
+                                vm.topic = t
+                                vm.start()
+                            } label: {
+                                Text(t)
+                                    .font(.system(.body, design: .monospaced))
+                                    .foregroundStyle(.primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                        }
+                    }
+                } header: {
+                    HStack {
+                        Text("Available Topics")
+                        Spacer()
+                        Button(action: vm.fetchTopics) {
+                            Image(systemName: "arrow.clockwise")
+                        }
+                        .disabled(vm.isFetchingTopics)
+                    }
+                }
+            }
+
             Section {
                 if vm.messages.isEmpty {
-                    Text(vm.isRunning ? "Waiting for messages…" : "Press Start to subscribe.")
+                    Text(vm.isRunning ? "Waiting for messages…" : "Select a topic above or type one and press Start.")
                         .foregroundStyle(.secondary)
                 } else {
                     ForEach(Array(vm.messages.enumerated()), id: \.offset) { _, msg in
